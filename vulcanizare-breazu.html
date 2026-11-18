@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111827" />
+  <meta name="description" content="Vulcanizare, detailing auto și spălătorie în Breazu / Rediu. Schimb anvelope rapid, echilibrare roți și servicii complete pentru mașina ta." />
+  <title>Vulcanizare, Detailing auto, Spălătorie - Breazu / Rediu</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#FACC15',
+            orange: '#F97316',
+            ink: '#111827'
+          },
+          boxShadow: {
+            glow: '0 12px 35px rgba(250, 204, 21, .18)'
+          }
+        }
+      }
+    };
+  </script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .hero-bg {
+      background-image: linear-gradient(90deg, rgba(10,15,25,.94) 0%, rgba(10,15,25,.82) 48%, rgba(10,15,25,.55) 100%),
+        url('https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=2200&q=85');
+      background-size: cover;
+      background-position: center;
+    }
+    .service-card { transition: transform .2s ease, box-shadow .2s ease; }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 18px 35px rgba(15,23,42,.12); }
+    .mobile-menu { display: none; }
+    .mobile-menu.open { display: block; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <!-- NAVBAR -->
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/95 text-white shadow-lg backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+      <a href="#acasa" class="flex min-w-0 items-center gap-3" aria-label="Vulcanizare Breazu - Acasă">
+        <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-accent text-slate-950">
+          <i class="fa-solid fa-screwdriver-wrench text-xl"></i>
+        </span>
+        <span class="min-w-0 leading-tight">
+          <span class="block truncate text-sm font-black uppercase tracking-wide sm:text-base">Vulcanizare Breazu</span>
+          <span class="block text-xs font-semibold text-slate-400">Detailing auto • Spălătorie</span>
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-8 lg:flex" aria-label="Navigare principală">
+        <a class="text-sm font-semibold text-slate-300 transition hover:text-accent" href="#servicii">Servicii</a>
+        <a class="text-sm font-semibold text-slate-300 transition hover:text-accent" href="#preturi">Prețuri</a>
+        <a class="text-sm font-semibold text-slate-300 transition hover:text-accent" href="#contact">Locație</a>
+      </nav>
+
+      <div class="hidden lg:block">
+        <!-- Înlocuiește numărul de mai jos cu numărul real al vulcanizării -->
+        <a href="tel:+40700000000" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-accent px-5 font-extrabold text-slate-950 shadow-glow transition hover:bg-yellow-300">
+          <i class="fa-solid fa-phone"></i> Sună Acum
+        </a>
+      </div>
+
+      <button id="menuButton" class="grid h-11 w-11 place-items-center rounded-lg border border-white/15 text-xl lg:hidden" aria-label="Deschide meniul" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+    <div id="mobileMenu" class="mobile-menu border-t border-white/10 bg-slate-950 px-4 py-4 lg:hidden">
+      <nav class="mx-auto flex max-w-7xl flex-col gap-1" aria-label="Navigare mobilă">
+        <a class="rounded-lg px-3 py-3 font-semibold hover:bg-white/5" href="#servicii">Servicii</a>
+        <a class="rounded-lg px-3 py-3 font-semibold hover:bg-white/5" href="#preturi">Prețuri</a>
+        <a class="rounded-lg px-3 py-3 font-semibold hover:bg-white/5" href="#contact">Locație</a>
+        <a href="tel:+40700000000" class="mt-2 flex min-h-12 items-center justify-center gap-2 rounded-xl bg-accent px-5 font-extrabold text-slate-950">
+          <i class="fa-solid fa-phone"></i> Sună Acum
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="acasa" class="hero-bg relative flex min-h-[720px] items-center pt-24 text-white sm:min-h-[680px]">
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950/30 to-transparent"></div>
+      <div class="relative mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-4 py-2 text-xs font-extrabold uppercase tracking-[.18em] text-accent sm:text-sm">
+            <span class="h-2 w-2 rounded-full bg-accent"></span> Service auto • Breazu / Rediu
+          </div>
+          <h1 class="text-4xl font-black leading-[1.08] tracking-tight sm:text-5xl lg:text-7xl">
+            Schimb anvelope <span class="text-accent">rapid și sigur</span> în Breazu–Rediu–Horlești–Iași
+          </h1>
+          <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300 sm:text-xl">
+            Ai grijă de mașina ta cu servicii de vulcanizare, detailing și spălătorie. Lucrăm atent, eficient și cu echipamente moderne.
+          </p>
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="tel:+40700000000" class="inline-flex min-h-14 items-center justify-center gap-3 rounded-xl bg-accent px-7 py-4 text-base font-black text-slate-950 shadow-glow transition hover:-translate-y-0.5 hover:bg-yellow-300 sm:text-lg">
+              <i class="fa-solid fa-phone-volume"></i> Sună pentru Programare
+            </a>
+            <a href="https://maps.app.goo.gl/PpwwSMxeWKRGi8NW8" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-14 items-center justify-center gap-3 rounded-xl border border-white/30 bg-white/10 px-7 py-4 text-base font-bold text-white backdrop-blur transition hover:bg-white/20 sm:text-lg">
+              <i class="fa-solid fa-map-location-dot text-accent"></i> Vezi Locația pe Hartă
+            </a>
+          </div>
+          <div class="mt-10 flex flex-wrap gap-x-7 gap-y-3 text-sm font-semibold text-slate-300">
+            <span><i class="fa-solid fa-circle-check mr-2 text-accent"></i>Servicii complete</span>
+            <span><i class="fa-solid fa-circle-check mr-2 text-accent"></i>Programări telefonice</span>
+            <span><i class="fa-solid fa-circle-check mr-2 text-accent"></i>În Breazu / Rediu</span>
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-slate-50 to-transparent"></div>
+    </section>
+
+    <!-- SERVICII -->
+    <section id="servicii" class="bg-slate-50 py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto mb-12 max-w-2xl text-center">
+          <span class="text-sm font-black uppercase tracking-[.2em] text-orange">Ce putem face pentru tine</span>
+          <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">Servicii pentru roți și mașina ta</h2>
+          <p class="mt-4 text-slate-600">De la schimbul sezonier de anvelope până la îngrijirea completă a mașinii, găsești totul într-un singur loc.</p>
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="service-card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <span class="grid h-14 w-14 place-items-center rounded-2xl bg-yellow-100 text-2xl text-slate-950"><i class="fa-solid fa-car-side"></i></span>
+            <h3 class="mt-5 text-xl font-extrabold text-slate-950">Schimb și montaj anvelope</h3>
+            <p class="mt-2 leading-relaxed text-slate-600">Montaj pentru autoturisme, SUV-uri și autoutilitare, cu atenție la fiecare roată.</p>
+          </article>
+          <article class="service-card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <span class="grid h-14 w-14 place-items-center rounded-2xl bg-yellow-100 text-2xl text-slate-950"><i class="fa-solid fa-gauge-high"></i></span>
+            <h3 class="mt-5 text-xl font-extrabold text-slate-950">Echilibrare computerizată</h3>
+            <p class="mt-2 leading-relaxed text-slate-600">Echilibrarea roților pentru rulare mai lină și reducerea vibrațiilor în volan.</p>
+          </article>
+          <article class="service-card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <span class="grid h-14 w-14 place-items-center rounded-2xl bg-yellow-100 text-2xl text-slate-950"><i class="fa-solid fa-bandage"></i></span>
+            <h3 class="mt-5 text-xl font-extrabold text-slate-950">Reparații pene</h3>
+            <p class="mt-2 leading-relaxed text-slate-600">Reparații la rece și la cald, în funcție de tipul și poziția deteriorării.</p>
+          </article>
+          <article class="service-card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <span class="grid h-14 w-14 place-items-center rounded-2xl bg-yellow-100 text-2xl text-slate-950"><i class="fa-solid fa-circle-dot"></i></span>
+            <h3 class="mt-5 text-xl font-extrabold text-slate-950">Îndreptat jante</h3>
+            <p class="mt-2 leading-relaxed text-slate-600">Intervenții pentru jante din aliaj și tablă, în funcție de gradul de deformare.</p>
+          </article>
+          <article class="service-card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <span class="grid h-14 w-14 place-items-center rounded-2xl bg-yellow-100 text-2xl text-slate-950"><i class="fa-solid fa-warehouse"></i></span>
+            <h3 class="mt-5 text-xl font-extrabold text-slate-950">Hotel anvelope</h3>
+            <p class="mt-2 leading-relaxed text-slate-600">Depozitare sezonieră pentru setul tău de anvelope, în condiții potrivite.</p>
+          </article>
+          <article class="service-card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <span class="grid h-14 w-14 place-items-center rounded-2xl bg-yellow-100 text-2xl text-slate-950"><i class="fa-solid fa-spray-can-sparkles"></i></span>
+            <h3 class="mt-5 text-xl font-extrabold text-slate-950">Detailing auto</h3>
+            <p class="mt-2 leading-relaxed text-slate-600">Curățare și îngrijire atentă a interiorului și exteriorului mașinii.</p>
+          </article>
+          <article class="service-card rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:col-span-2 lg:col-span-3">
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
+              <span class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-yellow-100 text-2xl text-slate-950"><i class="fa-solid fa-soap"></i></span>
+              <div>
+                <h3 class="text-xl font-extrabold text-slate-950">Spălătorie auto</h3>
+                <p class="mt-2 leading-relaxed text-slate-600">Spălare auto pentru un aspect curat și îngrijit, la exterior și, în funcție de pachet, la interior.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PREȚURI -->
+    <section id="preturi" class="bg-slate-950 py-20 text-white sm:py-24">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-10 text-center">
+          <span class="text-sm font-black uppercase tracking-[.2em] text-accent">Tarife orientative</span>
+          <h2 class="mt-3 text-3xl font-black tracking-tight sm:text-4xl">Prețuri vulcanizare</h2>
+          <p class="mt-4 text-slate-400">Pachet complet: demontat, montat și echilibrat pentru 4 roți.</p>
+        </div>
+
+        <div class="overflow-hidden rounded-2xl border border-white/10 bg-white/[.04] shadow-2xl">
+          <div class="overflow-x-auto">
+            <table class="w-full min-w-[320px] border-collapse text-left">
+              <thead class="bg-white/10 text-xs uppercase tracking-wider text-slate-300 sm:text-sm">
+                <tr>
+                  <th class="px-5 py-4 font-bold sm:px-8">Dimensiune jantă</th>
+                  <th class="px-5 py-4 text-right font-bold sm:px-8">Pachet 4 roți</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-white/10">
+                <tr class="transition hover:bg-white/[.04]"><td class="px-5 py-5 font-semibold sm:px-8">R13 – R15</td><td class="px-5 py-5 text-right text-lg font-black text-accent sm:px-8">120 RON</td></tr>
+                <tr class="transition hover:bg-white/[.04]"><td class="px-5 py-5 font-semibold sm:px-8">R16 – R17</td><td class="px-5 py-5 text-right text-lg font-black text-accent sm:px-8">150 RON</td></tr>
+                <tr class="transition hover:bg-white/[.04]"><td class="px-5 py-5 font-semibold sm:px-8">R18 – R19</td><td class="px-5 py-5 text-right text-lg font-black text-accent sm:px-8">180 RON</td></tr>
+                <tr class="transition hover:bg-white/[.04]"><td class="px-5 py-5 font-semibold sm:px-8">R20+</td><td class="px-5 py-5 text-right text-lg font-black text-accent sm:px-8">220 RON</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="flex flex-col gap-2 border-t border-white/10 bg-accent/10 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+            <div>
+              <p class="font-bold text-white">Reparație pană</p>
+              <p class="text-sm text-slate-400">Prețul final depinde de tipul deteriorării.</p>
+            </div>
+            <p class="text-2xl font-black text-accent">de la 30 RON</p>
+          </div>
+        </div>
+        <p class="mt-5 text-center text-xs leading-relaxed text-slate-500">* Tarifele sunt exemple orientative și trebuie confirmate/actualizate de către administrator înainte de publicare. Pot exista costuri suplimentare în funcție de tipul roții și de lucrare.</p>
+        <div class="mt-8 text-center">
+          <a href="tel:+40700000000" class="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-accent px-7 py-3 font-extrabold text-slate-950 transition hover:bg-yellow-300"><i class="fa-solid fa-phone"></i> Cere o ofertă</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DE CE NOI -->
+    <section class="bg-white py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto mb-12 max-w-2xl text-center">
+          <span class="text-sm font-black uppercase tracking-[.2em] text-orange">Alegerea potrivită pentru mașina ta</span>
+          <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">De ce să ne alegi?</h2>
+        </div>
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="text-center">
+            <span class="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-slate-950 text-2xl text-accent"><i class="fa-solid fa-stopwatch"></i></span>
+            <h3 class="mt-5 text-lg font-extrabold text-slate-950">Timp câștigat</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Programări telefonice și lucrări realizate eficient, fără a pierde timpul inutil.</p>
+          </div>
+          <div class="text-center">
+            <span class="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-slate-950 text-2xl text-accent"><i class="fa-solid fa-gears"></i></span>
+            <h3 class="mt-5 text-lg font-extrabold text-slate-950">Echipamente moderne</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Atenție la detalii și echipamente potrivite pentru lucrări de vulcanizare.</p>
+          </div>
+          <div class="text-center">
+            <span class="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-slate-950 text-2xl text-accent"><i class="fa-solid fa-user-gear"></i></span>
+            <h3 class="mt-5 text-lg font-extrabold text-slate-950">Experiență</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Abordare atentă și recomandări practice pentru nevoile mașinii tale.</p>
+          </div>
+          <div class="text-center">
+            <span class="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-slate-950 text-2xl text-accent"><i class="fa-solid fa-wallet"></i></span>
+            <h3 class="mt-5 text-lg font-extrabold text-slate-950">Prețuri corecte</h3>
+            <p class="mt-2 text-sm leading-relaxed text-slate-600">Tarife comunicate clar înainte de efectuarea lucrării.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / LOCAȚIE -->
+    <section id="contact" class="bg-slate-100 py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-12 text-center">
+          <span class="text-sm font-black uppercase tracking-[.2em] text-orange">Ne găsești în Breazu</span>
+          <h2 class="mt-3 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl">Contact și locație</h2>
+          <p class="mt-4 text-slate-600">Sună-ne pentru programare sau deschide locația în aplicația preferată de navigație.</p>
+        </div>
+
+        <div class="grid gap-8 lg:grid-cols-5">
+          <div class="space-y-4 lg:col-span-2">
+            <div class="rounded-2xl bg-white p-6 shadow-sm">
+              <div class="flex gap-4">
+                <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-yellow-100 text-xl text-slate-950"><i class="fa-solid fa-location-dot"></i></span>
+                <div>
+                  <h3 class="font-extrabold text-slate-950">Adresă</h3>
+                  <p class="mt-1 text-slate-600">Breazu, comuna Rediu, județul Iași, România</p>
+                  <p class="mt-1 text-xs text-slate-500">Adresa stradală exactă nu a fost furnizată.</p>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-2xl bg-white p-6 shadow-sm">
+              <div class="flex gap-4">
+                <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-yellow-100 text-xl text-slate-950"><i class="fa-solid fa-phone"></i></span>
+                <div>
+                  <h3 class="font-extrabold text-slate-950">Telefon</h3>
+                  <a href="tel:+40700000000" class="mt-1 inline-block font-bold text-orange hover:underline">07XX XXX XXX</a>
+                  <p class="mt-1 text-xs text-slate-500">Înlocuiește cu numărul real de telefon.</p>
+                </div>
+              </div>
+            </div>
+            <div class="rounded-2xl bg-white p-6 shadow-sm">
+              <div class="flex gap-4">
+                <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-yellow-100 text-xl text-slate-950"><i class="fa-regular fa-clock"></i></span>
+                <div>
+                  <h3 class="font-extrabold text-slate-950">Program de lucru</h3>
+                  <ul class="mt-2 space-y-1 text-sm text-slate-600">
+                    <li class="flex justify-between gap-4"><span>Luni – Vineri</span><strong class="text-slate-900">08:00 – 18:00</strong></li>
+                    <li class="flex justify-between gap-4"><span>Sâmbătă</span><strong class="text-slate-900">08:00 – 14:00</strong></li>
+                    <li class="flex justify-between gap-4"><span>Duminică</span><strong class="text-slate-900">Închis</strong></li>
+                  </ul>
+                  <p class="mt-2 text-xs text-slate-500">Program exemplificativ – confirmă orarul real.</p>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <a href="https://waze.com/ul?q=Breazu%2C%20Iasi%2C%20Romania&navigate=yes" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-14 items-center justify-center gap-2 rounded-xl bg-slate-950 px-3 py-3 text-center text-sm font-extrabold text-white transition hover:bg-slate-800"><i class="fa-brands fa-waze text-accent"></i> Deschide Waze</a>
+              <a href="https://maps.app.goo.gl/PpwwSMxeWKRGi8NW8" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-14 items-center justify-center gap-2 rounded-xl bg-accent px-3 py-3 text-center text-sm font-extrabold text-slate-950 transition hover:bg-yellow-300"><i class="fa-brands fa-google"></i> Google Maps</a>
+            </div>
+          </div>
+
+          <div class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm lg:col-span-3">
+            <!-- Hartă orientativă; înlocuiește cu iframe-ul exact din Google Maps > Distribuie > Încorporează o hartă -->
+            <iframe
+              title="Hartă - Breazu, Iași"
+              src="https://www.google.com/maps?q=Breazu%2C%20Iasi%2C%20Romania&output=embed"
+              width="100%"
+              height="100%"
+              style="min-height: 420px; border: 0;"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 py-8 text-slate-400">
+    <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 text-center sm:px-6 md:flex-row md:items-center md:justify-between md:text-left lg:px-8">
+      <div>
+        <p class="font-extrabold text-white">Vulcanizare, Detailing auto, Spălătorie – Breazu / Rediu</p>
+        <p class="mt-1 text-sm">Breazu, comuna Rediu, județul Iași</p>
+      </div>
+      <p class="text-sm">© <span id="year"></span> Toate drepturile rezervate.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Meniu mobil
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuButton.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.innerHTML = isOpen
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+    });
+
+    // Închide meniul după selectarea unei secțiuni
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
